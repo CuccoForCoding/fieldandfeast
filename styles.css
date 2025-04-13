@@ -38,7 +38,7 @@ header {
 }
 
 .logo-container img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     margin: auto;
     display: block;
@@ -74,6 +74,7 @@ nav {
 
 .nav-list li {
     margin: 0 20px;
+    font-weight: bold;
 }
 
 .nav-list a {
@@ -153,7 +154,7 @@ hr {
 }
 
 .offering-item h3 {
-    font-size: 36px;
+    font-size: 25px;
     margin-bottom: 15px;
 }
 
