@@ -1,0 +1,430 @@
+/* CSS BY JOEY CUCCO */
+/* Had a hard time getting the image gallery to resize properly. Still not working correctly 600px and under*/
+
+/* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+body {
+    font-family: 'Playfair Display', serif;
+} 
+
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ROOT VARIABLES */
+:root {
+    --midnight-blue: #1F2A44;
+    --olive-green: #76885B;
+    --champagne-gold: #E5C185;
+    --linen: #F8F4EC;
+    --dark-charcoal: #2B2B2B;
+    --soft-white:  #FAF9F6;
+}
+
+/* GLOBAL STYLES (mobile first/small) */
+body {
+    background-color: var(--soft-white);
+    color: var(--dark-charcoal);
+}
+
+header {
+    background-color: var(--midnight-blue);
+    padding: 20px;
+    text-align: center;
+    color: var(--soft-white);
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.main-title {
+    font-family: var(--font-serif);
+    font-size: 72px;
+    margin-top: 20px;
+}
+
+.tagline {
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 10px;
+    color: var(--soft-white);
+}
+
+nav {
+    background-color: var(--champagne-gold); 
+    padding: 10px 0; 
+    text-align: center; 
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-list li {
+    margin: 0 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--midnight-blue); 
+}
+
+.welcome-section {
+    padding: 20px;
+    background-color: var(--soft-white);
+}
+
+.welcome-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--midnight-blue);
+}
+
+.welcome-text {
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 800px;
+    color: var(--dark-charcoal);
+}
+
+hr {
+    height: 2px;
+    width: 62%;
+    margin: 20px auto;
+    border: none;
+    background-color: var(--champagne-gold);
+}
+
+.offerings-section {
+    padding: 40px 20px;
+    background-color: var(--soft-white);
+    color: var(--linen);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: var(--midnight-blue);
+    text-align: center;
+}
+
+.offerings-grid {
+    display: grid;
+    grid-template-areas:
+        "item1 item2"
+        "item3 item3";
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.offering-item:nth-child(1) {
+    grid-area: item1;
+}
+
+.offering-item:nth-child(2) {
+    grid-area: item2;
+}
+
+.offering-item:nth-child(3) {
+    grid-area: item3;
+}
+
+.offering-item {
+    background-color: var(--olive-green);
+    padding: 20px;
+    border: 1px solid var(--midnight-blue);
+    border-radius: 8px;
+}
+
+.offering-item h3 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.offering-item ul {
+    margin-top: 10px; 
+    padding-left: 20px; 
+    font-size: 18px; 
+    line-height: 1.6; 
+    list-style-type: disc; 
+}
+
+.offering-item li {
+    margin-bottom: 8px; 
+}
+
+.offering-item {
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.offering-item p, .offering-item ul {
+    margin: 0; 
+    padding: 0; 
+    font-size: 18px; 
+    line-height: 1.6; 
+}
+
+.offering-item ul {
+    list-style-position: inside; 
+    padding-left: 0; 
+}
+
+.offering-item ul li {
+    margin-left: 0; 
+    margin-bottom: 5px; 
+}
+
+.offering-item h3, .offering-item p, .offering-item ul {
+    text-align: left; 
+}
+
+.gallery-section {
+    padding: 20px;
+    background-color: var(--soft-white);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 30px;
+    color: var(--midnight-blue);
+    margin-bottom: 15px;
+}
+
+.welcome-text {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: var(--dark-charcoal);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 10px;
+    justify-items: center; 
+    align-items: center;
+}
+
+.gallery-grid img {
+    width: 100%; 
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-caption {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--dark-charcoal);
+    max-width: 90%;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+button {
+    background-color: var(--olive-green);
+    color: var(--soft-white);
+    border: none;
+    padding: 10px 20px; 
+    font-size: 18px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    width: 100%;
+}
+
+.site-footer {
+    background-color: var(--midnight-blue); 
+    color: var(--soft-white);
+    padding: 20px;
+    text-align: center;
+    font-family: var(--font-sans);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-contact {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.footer-contact a {
+    color: var(--champagne-gold);
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    color: var(--soft-white); 
+}
+
+.social-link {
+    color: var(--champagne-gold); 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-link:hover {
+    color: var(--soft-white);
+}
+
+/* MEDIA QUERY (600px) */
+@media screen and (max-width: 600px) {
+    .main-title {
+        font-size: 35px;
+    }
+
+    .tagline {
+        font-size: 18px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-list a {
+        font-size: 18px;
+    }
+
+    .welcome-title {
+        font-size: 25px;
+    }
+
+    .welcome-text {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .offerings-grid {
+        grid-template-areas:
+            "item1"
+            "item2"
+            "item3";
+    }
+
+    .offering-item h3 {
+        font-size: 22px;
+    }
+
+    .offering-item p {
+        font-size: 16px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /*QUESTION:  why isnt this stacking the images vertically???? */
+        grid-auto-rows: auto;
+    }
+
+    .gallery-caption {
+        text-align: center;
+    }
+}
+
+/* MEDIA QUERY (900px) */
+@media screen and (max-width: 900px) {
+    .main-title {
+        font-size: 37px;
+    }
+
+    .tagline {
+        font-size: 18px;
+    }
+
+    .welcome-title {
+        font-size: 28px;
+    }
+
+    .welcome-text {
+        font-size: 17px;
+    }
+
+    .offerings-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .offerings-grid {
+        grid-template-areas:
+            "item1 item2"
+            "item3 item3";
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* MEDIA QUERY (1200px) */
+@media screen and (max-width: 1200px) {
+    .main-title {
+        font-size: 32px;
+    }
+
+    .tagline {
+        font-size: 16px;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .welcome-title {
+        font-size: 26px;
+    }
+
+    .welcome-text {
+        font-size: 16px;
+    }
+
+    .offerings-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .offering-item p {
+        font-size: 17px;
+    }
+}
